@@ -1,0 +1,28 @@
+﻿<Window x:Class="hm11_10hm.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:hm11_10hm"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="242" Width="379">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Orientation="Vertical" VerticalAlignment="Center">
+            <TextBlock Text="Число А" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="10"/>
+            <TextBlock Text="Число Б" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="10"/>
+            <TextBlock Text="Результат" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="10"/>
+        </StackPanel>
+
+        <StackPanel Grid.Column="1" VerticalAlignment="Center">
+            <TextBox x:Name="numA" Text="{Binding Path=A, Mode=TwoWay}" BorderThickness="2" Height="20" Width="90" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="10"/>
+            <TextBox x:Name="numB" Text="{Binding Path=B, Mode=TwoWay}" BorderThickness="2" Height="20" Width="90" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="10"/>
+            <TextBox x:Name="result" Text="{Binding Path=Результат, Mode=TwoWay}" GotFocus="result_GotFocus" BorderThickness="2" Height="20" Width="90" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="10"/>
+        </StackPanel>
+
+    </Grid>
+</Window>
